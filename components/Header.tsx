@@ -7,12 +7,14 @@ import { Menu, X } from "lucide-react";
 const NAV_ITEMS = [
   { href: "#portfolio", label: "Work" },
   { href: "#services", label: "Services" },
+  { href: "#process", label: "Process" },
   { href: "#about", label: "About" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Book" },
 ];
 
-const LEFT_NAV_ITEMS = NAV_ITEMS.slice(0, 2);
-const RIGHT_NAV_ITEMS = NAV_ITEMS.slice(2);
+const LEFT_NAV_ITEMS = NAV_ITEMS.slice(0, 3);
+const RIGHT_NAV_ITEMS = NAV_ITEMS.slice(3);
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +58,7 @@ export function Header() {
             aria-label="Primary left"
             className="pointer-events-auto hidden md:block"
           >
-            <ul className="flex gap-8 text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(250,250,248,0.8)]">
+            <ul className="flex gap-8 text-[0.75rem] uppercase tracking-[0.12em] text-black">
               {LEFT_NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <a
@@ -96,7 +98,7 @@ export function Header() {
             aria-label="Primary right"
             className="pointer-events-auto hidden md:block"
           >
-            <ul className="flex gap-8 text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(250,250,248,0.8)]">
+            <ul className="flex gap-8 text-[0.75rem] uppercase tracking-[0.12em] text-black">
               {RIGHT_NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <a
