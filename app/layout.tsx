@@ -22,7 +22,14 @@ export const metadata: Metadata = {
   description:
     "Premium real estate photography in Dublin and across Ireland. Full-frame interiors, exteriors, and media optimised for Daft.ie, MyHome.ie and high-converting listings.",
   icons: {
-    icon: "/house-logo.png",
+    icon: [
+      {
+        url: "/house-favicon.svg?v=1",
+        type: "image/svg",
+      },
+    ],
+    shortcut: "/house-favicon.svg?v=1",
+    apple: "/house-favicon.svg?v=1",
   },
 };
 
