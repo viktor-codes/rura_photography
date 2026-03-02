@@ -30,6 +30,7 @@ const steps = [
 export function Process() {
   return (
     <section
+      id="process"
       aria-labelledby="process-heading"
       className="bg-light px-8 py-24 md:px-16 md:py-32"
     >
@@ -72,4 +73,3 @@ export function Process() {
     </section>
   );
 }
-

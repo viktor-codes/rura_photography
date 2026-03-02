@@ -33,11 +33,20 @@
   --font-body: var(--font-sans);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--color-page-bg);
   color: var(--color-page-fg);
-  font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family:
+    var(--font-body),
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-weight: 300;
   overflow-x: hidden;
 }
@@ -113,7 +122,9 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .reveal--visible {
@@ -122,3 +133,57 @@ body {
 }
 
 /* (кастомный курсор удалён по требованию дизайна) */
+
+/* ---------- FAQ accordion ---------- */
+
+.faq-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  padding-right: 1.5rem;
+  padding-bottom: 0;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    padding-bottom 0.25s ease;
+}
+
+.faq-panel--open {
+  max-height: 220px;
+  opacity: 1;
+  transform: translateY(0);
+  padding-bottom: 1rem;
+}
+
+.faq-icon {
+  position: relative;
+}
+
+.faq-icon-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background-color: var(--color-page-fg);
+  transform-origin: center;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.faq-icon-line--horizontal {
+  transform: translateY(-50%);
+}
+
+.faq-icon-line--vertical {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+button[aria-expanded="true"] .faq-icon-line--vertical {
+  transform: translateY(-50%) rotate(90deg) scaleX(0);
+  opacity: 0;
+}
+

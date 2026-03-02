@@ -11,7 +11,7 @@ export function About() {
       <Reveal className="relative aspect-3/4 overflow-hidden md:aspect-3/4">
         <div className="absolute inset-0 border border-black/10" />
         <Image
-          src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&q=85"
+          src="/vr.webp"
           alt="Viktor Rura at work with camera"
           fill
           sizes="(min-width: 1024px) 40vw, 100vw"
@@ -46,8 +46,8 @@ export function About() {
         <Reveal>
           <p className="mt-4 text-[1rem] leading-relaxed text-[#444440]">
             Sony A7M3 full-frame camera, professional lighting, and a 17–300mm
-            lens range means I can work any space — from compact city
-            apartments to large country properties — without compromise.
+            lens range means I can work any space — from compact city apartments
+            to large country properties — without compromise.
           </p>
         </Reveal>
         <div className="mt-8 flex flex-col gap-3">
@@ -70,4 +70,3 @@ export function About() {
     </section>
   );
 }
-

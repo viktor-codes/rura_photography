@@ -48,7 +48,7 @@ export function Header() {
               className="h-10 w-10 object-contain"
               priority
             />
-            <span className="font-heading text-xs font-normal uppercase tracking-[0.15em]">
+            <span className="font-heading text-xs font-bold uppercase tracking-[0.15em]">
               rura photography
             </span>
           </a>
@@ -77,7 +77,7 @@ export function Header() {
             href="#top"
             className="pointer-events-auto hidden items-center gap-3 text-page md:inline-flex"
           >
-            <span className="font-heading text-xs font-normal uppercase tracking-[0.15em]">
+            <span className="font-heading text-xs font-bold uppercase tracking-[0.15em]">
               viktor rura
             </span>
             <Image
@@ -88,7 +88,7 @@ export function Header() {
               className="h-10 w-10 object-contain"
               priority
             />
-            <span className="font-heading text-xs font-normal uppercase tracking-[0.15em]">
+            <span className="font-heading text-xs font-bold uppercase tracking-[0.15em]">
               photography
             </span>
           </a>

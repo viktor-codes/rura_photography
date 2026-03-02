@@ -27,7 +27,7 @@ export function Hero() {
           sizes="100vw"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black/90 to-black/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-black to-black/80" />
       </div>
 
       <div className="relative z-10 w-full px-8 pb-24 md:px-16 md:pb-32">
