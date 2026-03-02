@@ -22,9 +22,15 @@
   --color-light: var(--color-light);
   --color-accent: var(--color-accent);
 
-  /* Шрифты из next/font */
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
+  /* Типографика: связи Tailwind ↔ CSS-переменные */
+  /* Tailwind утилита font-serif → шрифт заголовков */
+  --font-serif: var(--font-serif);
+  /* Tailwind утилита font-sans → шрифт основного текста */
+  --font-sans: var(--font-sans);
+
+  /* Дополнительные алиасы, если используются классы font-heading / font-body */
+  --font-heading: var(--font-serif);
+  --font-body: var(--font-sans);
 }
 
 body {

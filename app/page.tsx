@@ -6,10 +6,12 @@ import { About } from "../components/About";
 import { Process } from "../components/Process";
 import { ContactForm } from "../components/ContactForm";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 
 export default function Home() {
   return (
     <>
+      <Header />
       <main id="top">
         <Hero />
         <Stats />

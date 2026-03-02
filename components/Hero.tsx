@@ -20,63 +20,21 @@ export function Hero() {
     >
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=80"
+          src="/house-hero.webp"
           alt="Luxury living room interior"
           fill
           priority
           sizes="100vw"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black/30 to-black/70" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/90 to-black/70" />
       </div>
-
-      <header className="pointer-events-none absolute left-0 right-0 top-0 z-20 flex items-center justify-between px-8 py-8 md:px-16">
-        <a
-          href="#top"
-          className="pointer-events-auto font-heading text-xs font-light uppercase tracking-[0.15em] text-page"
-        >
-          Viktor Rura
-        </a>
-        <nav aria-label="Primary" className="pointer-events-auto">
-          <ul className="flex gap-8 text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(250,250,248,0.8)]">
-            <li>
-              <a
-                href="#portfolio"
-                className="transition-opacity hover:opacity-100"
-              >
-                Work
-              </a>
-            </li>
-            <li>
-              <a
-                href="#services"
-                className="transition-opacity hover:opacity-100"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="transition-opacity hover:opacity-100">
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="transition-opacity hover:opacity-100"
-              >
-                Book
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
       <div className="relative z-10 w-full px-8 pb-24 md:px-16 md:pb-32">
         <div className="max-w-3xl space-y-6">
           <p
             ref={labelRef}
-            className={`reveal font-body text-[0.7rem] uppercase tracking-[0.25em] text-accent ${
+            className={`reveal font-sans text-[0.7rem] uppercase tracking-[0.25em] text-accent ${
               labelVisible ? "reveal--visible" : ""
             }`}
           >
@@ -85,7 +43,7 @@ export function Hero() {
           <h1
             id="hero-heading"
             ref={titleRef}
-            className={`reveal font-heading text-[clamp(3.5rem,7vw,6rem)] font-light leading-none text-page ${
+            className={`reveal font-serif text-[clamp(3.5rem,7vw,6rem)] font-light leading-none text-white ${
               titleVisible ? "reveal--visible" : ""
             }`}
           >

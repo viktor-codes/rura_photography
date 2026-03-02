@@ -3,17 +3,17 @@ import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const headingFont = Cormorant_Garamond({
-  variable: "--font-heading",
+  variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["300", "400", "500"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
 const bodyFont = DM_Sans({
-  variable: "--font-body",
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["300", "400", "500"],
   display: "swap",
 });
 
@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "Viktor Rura — Property Photography Dublin",
   description:
     "Premium real estate photography in Dublin and across Ireland. Full-frame interiors, exteriors, and media optimised for Daft.ie, MyHome.ie and high-converting listings.",
+  icons: {
+    icon: "/house-logo.png",
+  },
 };
 
 export default function RootLayout({
