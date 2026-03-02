@@ -4,28 +4,28 @@ import { Reveal } from "./Reveal";
 const portfolioItems = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=85",
+    src: "/house-1.jpg",
     alt: "Living room interior",
     label: "Dublin 4 · Apartment",
     title: "Ballsbridge Residence",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900&q=85",
+    src: "/house-2.jpg",
     alt: "Modern kitchen",
     label: "Dublin 6 · House",
     title: "Ranelagh Family Home",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=85",
+    src: "/house-3.jpg",
     alt: "Bedroom interior",
     label: "Dublin 2 · Penthouse",
     title: "City Centre Penthouse",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=85",
+    src: "/house-4.jpg",
     alt: "Country house exterior",
     label: "Co. Wicklow · Country House",
     title: "Wicklow Retreat",
@@ -99,4 +99,3 @@ export function Portfolio() {
     </section>
   );
 }
-

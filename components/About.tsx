@@ -11,7 +11,7 @@ export function About() {
       <Reveal className="relative aspect-3/4 overflow-hidden md:aspect-3/4">
         <div className="absolute inset-0 border border-black/10" />
         <Image
-          src="/vr.webp"
+          src="/vr.png"
           alt="Viktor Rura at work with camera"
           fill
           sizes="(min-width: 1024px) 40vw, 100vw"
