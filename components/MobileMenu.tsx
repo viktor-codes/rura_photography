@@ -21,7 +21,7 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
           : "pointer-events-none opacity-0"
       }`}
     >
-      <div className="flex h-full flex-col px-6 py-8">
+      <div className="flex h-full flex-col px-6 py-3">
         <div className="flex items-center justify-between">
           <a
             href="#top"
@@ -77,4 +77,3 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
     </div>
   );
 }
-
