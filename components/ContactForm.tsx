@@ -26,10 +26,7 @@ export function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (
-    field: keyof FormState,
-    value: string,
-  ): void => {
+  const handleChange = (field: keyof FormState, value: string): void => {
     setValues((prev) => ({ ...prev, [field]: value }));
     setErrors((prev) => ({ ...prev, [field]: undefined }));
     if (submitted) {
@@ -74,7 +71,7 @@ export function ContactForm() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative flex min-h-[80vh] items-center bg-[#0e0e0c] px-8 py-24 text-page md:px-16 md:py-32"
+      className="relative flex min-h-[80vh] items-center bg-[#0e0e0c] px-8 py-24 text-page md:px-16 md:py-32 overflow-hidden"
     >
       <span
         aria-hidden="true"
@@ -129,10 +126,7 @@ export function ContactForm() {
                 aria-describedby={errors.name ? "name-error" : undefined}
               />
               {errors.name && (
-                <p
-                  id="name-error"
-                  className="text-[0.75rem] text-red-300"
-                >
+                <p id="name-error" className="text-[0.75rem] text-red-300">
                   {errors.name}
                 </p>
               )}
@@ -156,10 +150,7 @@ export function ContactForm() {
                 aria-describedby={errors.email ? "email-error" : undefined}
               />
               {errors.email && (
-                <p
-                  id="email-error"
-                  className="text-[0.75rem] text-red-300"
-                >
+                <p id="email-error" className="text-[0.75rem] text-red-300">
                   {errors.email}
                 </p>
               )}
@@ -253,15 +244,14 @@ export function ContactForm() {
                 className="h-28 resize-none border-b border-[rgba(250,250,248,0.2)] bg-transparent pb-2 text-[0.9rem] outline-none transition-colors focus:border-accent"
                 placeholder="Location, size, preferred date..."
                 value={values.message}
-                onChange={(event) => handleChange("message", event.target.value)}
+                onChange={(event) =>
+                  handleChange("message", event.target.value)
+                }
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={errors.message ? "message-error" : undefined}
               />
               {errors.message && (
-                <p
-                  id="message-error"
-                  className="text-[0.75rem] text-red-300"
-                >
+                <p id="message-error" className="text-[0.75rem] text-red-300">
                   {errors.message}
                 </p>
               )}
@@ -294,4 +284,3 @@ export function ContactForm() {
     </section>
   );
 }
-

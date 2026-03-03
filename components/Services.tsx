@@ -50,7 +50,7 @@ export function Services() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="bg-[#0e0e0c] px-8 py-24 text-page md:px-16 md:py-32"
+      className="bg-[#0e0e0c] px-8 py-24 text-white md:px-16 md:py-32"
     >
       <Reveal className="inline-block">
         <p className="text-[0.65rem] uppercase tracking-[0.25em] text-accent">
@@ -60,7 +60,7 @@ export function Services() {
       <Reveal>
         <h2
           id="services-heading"
-          className="mt-2 font-heading text-[clamp(2.2rem,4vw,3.5rem)] font-light leading-tight text-page"
+          className="mt-2 font-heading text-[clamp(2.2rem,4vw,3.5rem)] font-light leading-tight text-white"
         >
           Simple packages.
           <br />
@@ -105,4 +105,3 @@ export function Services() {
     </section>
   );
 }
-

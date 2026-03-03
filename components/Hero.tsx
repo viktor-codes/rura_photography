@@ -27,7 +27,9 @@ export function Hero() {
           sizes="100vw"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black to-black/80" />
+        {/* <div className="absolute inset-0 bg-linear-to-b from-black via-black/50 to-black/95" /> */}
+
+        <div className="absolute inset-0 bg-linear-to-r from-black via-black/80 to-black/70" />
       </div>
 
       <div className="relative z-10 w-full px-8 pb-24 md:px-16 md:pb-32">
@@ -65,17 +67,16 @@ export function Hero() {
           <a
             ref={ctaRef}
             href="#contact"
-            className={`reveal inline-flex items-center gap-4 text-[0.75rem] uppercase tracking-[0.15em] text-page transition-all hover:gap-6 ${
+            className={`reveal inline-flex items-center gap-4 text-[0.75rem] uppercase tracking-[0.15em] text-white  transition-all hover:gap-6 ${
               ctaVisible ? "reveal--visible" : ""
             }`}
           >
             Book a shoot
-            <span className="block h-px w-10 bg-accent transition-[width] duration-300 hover:w-16" />
           </a>
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-16 right-16 z-10 flex flex-col items-center gap-2">
+      <div className="hidden pointer-events-none absolute bottom-16 right-16 z-10 md:flex flex-col items-center gap-2">
         <span className="text-[0.65rem] uppercase tracking-[0.2em] text-[rgba(250,250,248,0.4)] [writing-mode:vertical-rl]">
           Scroll
         </span>
