@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 
 export function Hero() {
@@ -40,7 +41,7 @@ export function Hero() {
               labelVisible ? "reveal--visible" : ""
             }`}
           >
-            Property Photography · Dublin, Ireland
+            Property Photography · Midlands & Nationwide
           </p>
           <h1
             id="hero-heading"
@@ -61,18 +62,19 @@ export function Hero() {
               subVisible ? "reveal--visible" : ""
             }`}
           >
-            Specialised real estate photography for agents, landlords, and
-            hosts in Dublin. Clean, consistent visuals that help listings stand
-            out and sell faster.
+            Based in the heart of Ireland. Providing clean, high-end visuals and
+            24-hour delivery for agents, landlords, and hosts in the Midlands,
+            Dublin, and beyond.
           </p>
           <a
             ref={ctaRef}
             href="#contact"
-            className={`reveal inline-flex items-center gap-4 text-[0.75rem] uppercase tracking-[0.15em] text-white  transition-all hover:gap-6 ${
+            className={`reveal group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-[0.75rem] uppercase tracking-[0.15em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all hover:bg-white/10 hover:gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black active:translate-y-[1px] active:scale-[0.98] active:shadow-[0_4px_18px_rgba(0,0,0,0.6)] ${
               ctaVisible ? "reveal--visible" : ""
             }`}
           >
-            Request availability
+            <span className="font-medium">Request availability</span>
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 group-active:translate-x-0.5" />
           </a>
         </div>
       </div>
