@@ -47,19 +47,19 @@ export function About() {
         <Reveal>
           <p className="mt-4 text-[1rem] leading-relaxed text-[#444440]">
             My background in product and web development means I understand how
-            people browse online. Combined with a Sony A7M3 full-frame camera,
-            professional lighting, and a 17–300mm lens range, I can work in
+            people browse online. Combined with a professional full-frame
+            camera, LED lighting, and a 17–300mm lens range, I can work in
             anything from compact city apartments to large country properties
             without compromise.
           </p>
         </Reveal>
         <div className="mt-8 flex flex-col gap-3">
           {[
-            "Sony A7M3 · Full-frame sensor",
+            "Professional camera setup",
             "17mm–300mm lens coverage",
             "Professional LED lighting",
             "Gimbal stabilisation for video",
-            "Based in Dublin, available nationwide",
+            "Based in Midlands, available nationwide",
           ].map((item) => (
             <Reveal key={item}>
               <div className="flex items-center gap-3 text-[0.8rem] tracking-[0.05em] text-grey">

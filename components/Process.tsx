@@ -63,8 +63,8 @@ export function Process() {
               <p className="mt-2 text-[0.8rem] leading-relaxed text-grey">
                 {step.description}
               </p>
-              {index < steps.length - 1 && (
-                <span className="pointer-events-none absolute -right-6 top-5 hidden h-px w-10 bg-linear-to-r from-accent to-transparent md:block" />
+              {index < steps.length && (
+                <span className="pointer-events-none absolute left-0 top-5 h-px w-10 bg-linear-to-r from-accent to-transparent " />
               )}
             </article>
           </Reveal>

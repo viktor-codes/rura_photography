@@ -109,14 +109,13 @@ export function ContactForm() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative flex min-h-[80vh] items-center bg-[#0e0e0c] px-8 py-24 text-white md:px-16 md:py-32 overflow-hidden"
+      className="relative flex min-h-[80vh] items-center px-8 py-24 text-white md:px-16 md:py-32 overflow-hidden"
     >
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-4 top-1/2 -translate-y-1/2 font-heading text-[20vw] font-light tracking-[0.2em] text-[rgba(250,250,248,0.03)]"
-      >
-        BOOK
-      </span>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-[url('/house-contact.webp')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0e0e0c]/80 via-[#0e0e0c]/92 to-[#0e0e0c]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
+      </div>
       <div className="relative z-10 max-w-xl">
         <Reveal className="inline-block">
           <p className="text-[0.65rem] uppercase tracking-[0.25em] text-accent">
