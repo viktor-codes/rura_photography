@@ -37,17 +37,20 @@ export function About() {
         </Reveal>
         <Reveal>
           <p className="mt-6 text-[1rem] leading-relaxed text-[#444440]">
-            I&apos;m Viktor — a photographer and fullstack developer based in
-            Dublin. I shoot property with a technical eye: every frame is
-            composed for how it will actually be seen — on screen, in listings,
-            on social.
+            I&apos;m Viktor — a Dublin-based property photographer focused on
+            helping agents, landlords, and hosts present homes in the best
+            possible light. I shoot with a technical, conversion-driven eye:
+            every frame is composed for how it will actually be seen — on
+            listing portals, on your website, and on social.
           </p>
         </Reveal>
         <Reveal>
           <p className="mt-4 text-[1rem] leading-relaxed text-[#444440]">
-            Sony A7M3 full-frame camera, professional lighting, and a 17–300mm
-            lens range means I can work any space — from compact city apartments
-            to large country properties — without compromise.
+            My background in product and web development means I understand how
+            people browse online. Combined with a Sony A7M3 full-frame camera,
+            professional lighting, and a 17–300mm lens range, I can work in
+            anything from compact city apartments to large country properties
+            without compromise.
           </p>
         </Reveal>
         <div className="mt-8 flex flex-col gap-3">

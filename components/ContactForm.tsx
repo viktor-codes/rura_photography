@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Reveal } from "./Reveal";
+import confetti from "canvas-confetti";
 
 type FormState = {
   name: string;
@@ -25,12 +26,17 @@ export function ContactForm() {
   const [values, setValues] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange = (field: keyof FormState, value: string): void => {
     setValues((prev) => ({ ...prev, [field]: value }));
     setErrors((prev) => ({ ...prev, [field]: undefined }));
     if (submitted) {
       setSubmitted(false);
+    }
+    if (submitError) {
+      setSubmitError(null);
     }
   };
 
@@ -64,7 +70,39 @@ export function ContactForm() {
     if (!validate()) {
       return;
     }
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+      .then(async (response) => {
+        if (!response.ok) {
+          const data = await response.json().catch(() => null);
+          throw new Error(data?.error ?? "Something went wrong.");
+        }
+        setSubmitted(true);
+        setValues(initialState);
+        confetti({
+          particleCount: 120,
+          spread: 60,
+          origin: { y: 0.7 },
+        });
+      })
+      .catch((error: unknown) => {
+        const message =
+          error instanceof Error
+            ? error.message
+            : "Failed to send. Please try again.";
+        setSubmitError(message);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -97,8 +135,8 @@ export function ContactForm() {
         </Reveal>
         <Reveal>
           <p className="mt-4 max-w-md text-[0.85rem] leading-relaxed text-[rgba(250,250,248,0.6)]">
-            Based in Dublin. Available across Leinster and nationwide for the
-            right project.
+            Based in Dublin. I usually reply within one business day. Available
+            across Leinster and nationwide for the right project.
           </p>
         </Reveal>
 
@@ -260,13 +298,14 @@ export function ContactForm() {
             <div className="md:col-span-2 mt-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className={`px-10 py-3 text-[0.75rem] uppercase tracking-[0.15em] transition-transform ${
                   submitted
                     ? "bg-emerald-500 text-white"
-                    : "bg-accent text-page-foreground hover:-translate-y-px hover:bg-[#d4b882]"
+                    : "bg-accent text-page-foreground hover:-translate-y-px hover:bg-[#d4b882] disabled:opacity-60 disabled:hover:translate-y-0"
                 }`}
               >
-                {submitted ? "Sent ✓" : "Send enquiry"}
+                {isSubmitting ? "Sending..." : submitted ? "Sent ✓" : "Send enquiry"}
               </button>
               <p className="text-[0.75rem] text-[rgba(250,250,248,0.6)]">
                 or email{" "}
@@ -277,6 +316,9 @@ export function ContactForm() {
                   hello@viktorrura.ie
                 </a>
               </p>
+              {submitError && (
+                <p className="text-[0.75rem] text-red-300">{submitError}</p>
+              )}
             </div>
           </form>
         </Reveal>

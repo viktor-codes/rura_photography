@@ -5,25 +5,25 @@ const steps = [
     number: "01",
     title: "You book online",
     description:
-      "Fill the form below. I'll confirm within a few hours and lock in your date.",
+      "Share property details, preferred dates, and access in the form below. I'll confirm timing, clear pricing, and any add-ons the same day.",
   },
   {
     number: "02",
     title: "I arrive & shoot",
     description:
-      "Usually 1–2 hours on site. I handle setup, lighting, and every angle.",
+      "Typically 60–120 minutes on site. I handle access, setup, lighting, and every key angle with minimal disruption for owners or tenants.",
   },
   {
     number: "03",
     title: "Edit & deliver",
     description:
-      "Photos professionally edited and delivered via download link within 24 hours.",
+      "Images are professionally edited and delivered via a download gallery within 24 hours. Same-day delivery can usually be arranged on request.",
   },
   {
     number: "04",
     title: "You go live",
     description:
-      "Upload to Daft, MyHome, or wherever — ready to use immediately.",
+      "You upload to Daft, MyHome, your own site, or social — everything is ready to use in both web-optimised and high-resolution versions.",
   },
 ];
 

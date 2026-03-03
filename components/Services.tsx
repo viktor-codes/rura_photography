@@ -6,7 +6,7 @@ const services = [
     number: "01",
     name: "Listing\nPhotography",
     description:
-      "Full-frame interior and exterior photography. Optimised for Daft.ie, MyHome.ie, and all major portals.",
+      "Professional interior and exterior photography for sales and rentals. Optimised for Daft.ie, MyHome.ie, MyHome.ie and major portals.",
     price: "From €250",
     includes: [
       "Up to 25 edited images",
@@ -20,7 +20,7 @@ const services = [
     number: "02",
     name: "Premium\nProperty Pack",
     description:
-      "Photography, twilight shots, and a short video walkthrough. For properties that deserve more than a standard listing.",
+      "Photography, twilight exteriors, and a short video walkthrough. Ideal for high-value listings and new developments.",
     price: "From €550",
     includes: [
       "40+ edited images",
@@ -34,7 +34,7 @@ const services = [
     number: "03",
     name: "Agent\nPartnership",
     description:
-      "Monthly retainer for agencies. Consistent quality across all listings, priority booking, and simplified billing.",
+      "Monthly retainer for estate agencies and developers. Consistent quality across all listings, priority booking, and simplified billing.",
     price: "Custom pricing",
     includes: [
       "Dedicated slots each week",

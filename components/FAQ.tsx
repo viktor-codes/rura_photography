@@ -12,12 +12,27 @@ const faqs: FaqItem[] = [
   {
     question: "How fast will I receive the photos?",
     answer:
-      "I provide a guaranteed 24-hour turnaround. You will receive a link to your professional gallery the very next day after the shoot.",
+      "For standard listings I provide a guaranteed 24-hour turnaround on business days. You receive a link to your professional gallery the very next day after the shoot. Same-day delivery can usually be arranged on request.",
   },
   {
     question: "What areas do you cover?",
     answer:
       "I am based in Dublin and cover the entire Greater Dublin Area. I am also available for projects across Leinster and nationwide upon request.",
+  },
+  {
+    question: "How much does it cost?",
+    answer:
+      "Standard listing photography starts from €250, premium photo + video packages from €550, and ongoing agency partnerships are quoted based on volume. Check the Services section for a breakdown and then reach out for a tailored quote if you have multiple properties.",
+  },
+  {
+    question: "Do you work with short-term rentals such as Airbnb or Booking.com?",
+    answer:
+      "Yes. I regularly shoot for short-term rentals and serviced accommodation. We focus on details that perform well on booking platforms — light, warmth, and the key amenities guests care about most.",
+  },
+  {
+    question: "How should I prepare the property?",
+    answer:
+      "Ideally the property is clean, decluttered, and ready as if for a viewing: worktops cleared, bins hidden, lights working, beds made, and outside areas tidied. I can share a simple prep checklist ahead of the shoot, and I will make small adjustments on site where needed.",
   },
   {
     question: "Do you provide floor plans or video?",
@@ -32,12 +47,17 @@ const faqs: FaqItem[] = [
   {
     question: "What happens if the weather is bad?",
     answer:
-      "For exterior shots, I offer Blue Sky Replacement in post-production at no extra cost, so your listing looks great even on a typical Irish rainy day.",
+      "For exterior shots, I offer Blue Sky Replacement in post-production at no extra cost, so your listing looks great even on a typical Irish rainy day. If conditions are extremely poor, we can also reschedule exteriors while still capturing interiors.",
   },
   {
     question: "Who owns the rights to the photos?",
     answer:
-      "The photography fee includes a commercial license for the duration of the property listing (sale or rent).",
+      "The photography fee includes a commercial licence for marketing the specific property across listing portals, your website, and social media for the duration of the sale or rental campaign. If you need broader usage, we can agree this in advance.",
+  },
+  {
+    question: "What if I need to cancel or reschedule?",
+    answer:
+      "I understand that plans change. Please let me know as soon as possible — there is no fee for weather-related rescheduling. Very late cancellations on the day of the shoot may be subject to a fee, especially for larger bookings.",
   },
 ];
 

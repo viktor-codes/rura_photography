@@ -49,11 +49,11 @@ export function Hero() {
               titleVisible ? "reveal--visible" : ""
             }`}
           >
-            Every space
+            Property photography
             <br />
-            deserves to be
+            that makes your listings
             <br />
-            <em className="not-italic text-accent">seen right.</em>
+            <em className="not-italic text-accent">stand out.</em>
           </h1>
           <p
             ref={subRef}
@@ -61,8 +61,9 @@ export function Hero() {
               subVisible ? "reveal--visible" : ""
             }`}
           >
-            Full-frame property photography that sells faster and commands
-            better prices. Professional, clean, delivered fast.
+            Specialised real estate photography for agents, landlords, and
+            hosts in Dublin. Clean, consistent visuals that help listings stand
+            out and sell faster.
           </p>
           <a
             ref={ctaRef}
@@ -71,7 +72,7 @@ export function Hero() {
               ctaVisible ? "reveal--visible" : ""
             }`}
           >
-            Book a shoot
+            Request availability
           </a>
         </div>
       </div>
