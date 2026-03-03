@@ -69,7 +69,7 @@ export function Hero() {
           <a
             ref={ctaRef}
             href="#contact"
-            className={`reveal group inline-flex items-center gap-3 border border-white/20 bg-white/5 px-6 py-3 text-[0.75rem] uppercase tracking-[0.15em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all hover:bg-white/10 hover:gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black active:translate-y-[1px] active:scale-[0.98] active:shadow-[0_4px_18px_rgba(0,0,0,0.6)] ${
+            className={`reveal group inline-flex items-center gap-3 border border-white/20 bg-white/5 px-6 py-3 text-[0.75rem] uppercase tracking-[0.15em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all hover:bg-white/10 hover:gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black active:translate-y-px active:scale-[0.98] active:shadow-[0_4px_18px_rgba(0,0,0,0.6)] ${
               ctaVisible ? "reveal--visible" : ""
             }`}
           >

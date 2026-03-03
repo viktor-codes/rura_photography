@@ -3,7 +3,7 @@ export function Stats() {
     { value: "24h", label: "Delivery turnaround" },
     { value: "A7M3", label: "Sony full-frame" },
     { value: "17–300", label: "mm lens coverage" },
-    { value: "IE", label: "Based in Ireland" },
+    { value: "100%", label: "Success rate" },
   ];
 
   return (

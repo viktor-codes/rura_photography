@@ -51,9 +51,9 @@ export function Portfolio() {
               id="portfolio-heading"
               className="font-heading text-[clamp(2.2rem,4vw,3.5rem)] font-light leading-tight text-page-foreground"
             >
-              Properties that
+              Visuals that
               <br />
-              speak for themselves.
+              drive inquiries.
             </h2>
           </Reveal>
         </div>

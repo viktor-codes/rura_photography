@@ -37,7 +37,7 @@ export function About() {
         </Reveal>
         <Reveal>
           <p className="mt-6 text-[1rem] leading-relaxed text-[#444440]">
-            I&apos;m Viktor — a Dublin-based property photographer focused on
+            I&apos;m Viktor — a Midlands-based property photographer focused on
             helping agents, landlords, and hosts present homes in the best
             possible light. I shoot with a technical, conversion-driven eye:
             every frame is composed for how it will actually be seen — on

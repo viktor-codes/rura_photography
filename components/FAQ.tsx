@@ -17,7 +17,7 @@ const faqs: FaqItem[] = [
   {
     question: "What areas do you cover?",
     answer:
-      "I am based in Dublin and cover the entire Greater Dublin Area. I am also available for projects across Leinster and nationwide upon request.",
+      "I am based in the heart of the Midlands, allowing me to easily serve Westmeath, Offaly, Laois, and Longford, as well as regular trips to Dublin and nationwide.",
   },
   {
     question: "How much does it cost?",
@@ -25,7 +25,8 @@ const faqs: FaqItem[] = [
       "Standard listing photography starts from €250, premium photo + video packages from €550, and ongoing agency partnerships are quoted based on volume. Check the Services section for a breakdown and then reach out for a tailored quote if you have multiple properties.",
   },
   {
-    question: "Do you work with short-term rentals such as Airbnb or Booking.com?",
+    question:
+      "Do you work with short-term rentals such as Airbnb or Booking.com?",
     answer:
       "Yes. I regularly shoot for short-term rentals and serviced accommodation. We focus on details that perform well on booking platforms — light, warmth, and the key amenities guests care about most.",
   },
@@ -137,4 +138,3 @@ export function FAQ() {
     </section>
   );
 }
-

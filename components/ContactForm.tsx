@@ -109,7 +109,7 @@ export function ContactForm() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative flex min-h-[80vh] items-center bg-[#0e0e0c] px-8 py-24 text-page md:px-16 md:py-32 overflow-hidden"
+      className="relative flex min-h-[80vh] items-center bg-[#0e0e0c] px-8 py-24 text-white md:px-16 md:py-32 overflow-hidden"
     >
       <span
         aria-hidden="true"
@@ -134,9 +134,10 @@ export function ContactForm() {
           </h2>
         </Reveal>
         <Reveal>
-          <p className="mt-4 max-w-md text-[0.85rem] leading-relaxed text-[rgba(250,250,248,0.6)]">
-            Based in Dublin. I usually reply within one business day. Available
-            across Leinster and nationwide for the right project.
+          <p className="mt-4 max-w-md text-[0.85rem] text-pretty leading-relaxed text-[rgba(250,250,248,0.6)]">
+            Based in the Midlands, I am ideally positioned to serve clients
+            nationwide. Whether it's a city apartment or a country estate, I
+            usually respond to all inquiries within one business day.
           </p>
         </Reveal>
 
@@ -305,17 +306,13 @@ export function ContactForm() {
                     : "bg-accent text-page-foreground hover:-translate-y-px hover:bg-[#d4b882] disabled:opacity-60 disabled:hover:translate-y-0"
                 }`}
               >
-                {isSubmitting ? "Sending..." : submitted ? "Sent ✓" : "Send enquiry"}
+                {isSubmitting
+                  ? "Sending..."
+                  : submitted
+                    ? "Sent ✓"
+                    : "Send enquiry"}
               </button>
-              <p className="text-[0.75rem] text-[rgba(250,250,248,0.6)]">
-                or email{" "}
-                <a
-                  href="mailto:hello@viktorrura.ie"
-                  className="border-b border-[rgba(250,250,248,0.4)] text-[rgba(250,250,248,0.8)] transition-colors hover:text-page"
-                >
-                  hello@viktorrura.ie
-                </a>
-              </p>
+
               {submitError && (
                 <p className="text-[0.75rem] text-red-300">{submitError}</p>
               )}
