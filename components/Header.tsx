@@ -71,11 +71,11 @@ export function Header() {
             href="#top"
             className="pointer-events-auto hidden items-center gap-3 text-page md:inline-flex"
           >
-            <span className="font-heading text-xs font-bold uppercase tracking-[0.15em]">
+            <span className="font-heading text-xs font-bold uppercase tracking-[0.15em] hidden lg:block">
               viktor rura
             </span>
             <Logo className="w-10 h-10" />
-            <span className="font-heading text-xs font-bold uppercase tracking-[0.15em]">
+            <span className="font-heading text-xs font-bold uppercase tracking-[0.15em] hidden lg:block">
               photography
             </span>
           </a>

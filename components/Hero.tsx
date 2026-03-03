@@ -16,7 +16,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative flex min-h-screen items-end overflow-hidden bg-page text-white"
+      className="relative flex min-h-screen overflow-hidden bg-page text-white"
       aria-labelledby="hero-heading"
     >
       <div className="absolute inset-0">
@@ -33,15 +33,15 @@ export function Hero() {
         <div className="absolute inset-0 bg-linear-to-r from-black via-black/80 to-black/70" />
       </div>
 
-      <div className="relative z-10 w-full px-8 pb-24 md:px-16 md:pb-32">
-        <div className="max-w-3xl space-y-6">
+      <div className="relative z-10 w-full flex items-end px-8 pb-24 md:px-16 md:pb-32">
+        <div className="max-w-5xl space-y-6">
           <p
             ref={labelRef}
             className={`reveal font-sans text-[0.7rem] uppercase tracking-[0.25em] text-accent ${
               labelVisible ? "reveal--visible" : ""
             }`}
           >
-            Property Photography · Midlands & Nationwide
+            Property Photography · Midlands, Ireland
           </p>
           <h1
             id="hero-heading"
@@ -69,7 +69,7 @@ export function Hero() {
           <a
             ref={ctaRef}
             href="#contact"
-            className={`reveal group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-[0.75rem] uppercase tracking-[0.15em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all hover:bg-white/10 hover:gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black active:translate-y-[1px] active:scale-[0.98] active:shadow-[0_4px_18px_rgba(0,0,0,0.6)] ${
+            className={`reveal group inline-flex items-center gap-3 border border-white/20 bg-white/5 px-6 py-3 text-[0.75rem] uppercase tracking-[0.15em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all hover:bg-white/10 hover:gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black active:translate-y-[1px] active:scale-[0.98] active:shadow-[0_4px_18px_rgba(0,0,0,0.6)] ${
               ctaVisible ? "reveal--visible" : ""
             }`}
           >
