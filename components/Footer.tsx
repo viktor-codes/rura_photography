@@ -14,10 +14,7 @@ export function Footer() {
           </p>
         </div>
 
-        <nav
-          aria-label="Footer navigation"
-          className="order-3 md:order-none"
-        >
+        <nav aria-label="Footer navigation" className="order-3 md:order-0">
           <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[0.7rem] uppercase tracking-[0.14em]">
             {PRIMARY_NAV_ITEMS.map((item) => (
               <li key={item.href}>
