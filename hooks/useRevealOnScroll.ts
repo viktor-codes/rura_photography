@@ -1,31 +1,33 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export function useRevealOnScroll<T extends HTMLElement = HTMLElement>(
   options?: IntersectionObserverInit,
 ) {
   const ref = useRef<T | null>(null);
+  const optionsRef = useRef(options);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    if (!ref.current) return;
+  useLayoutEffect(() => {
+    optionsRef.current = options;
+  });
 
+  useEffect(() => {
     const target = ref.current;
+    if (!target) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
+        for (const entry of entries) {
           if (entry.isIntersecting) {
-            const delayGroup = index % 4;
-            const delay = delayGroup * 80;
-            window.setTimeout(() => {
-              setIsVisible(true);
-            }, delay);
+            setIsVisible(true);
             observer.unobserve(entry.target);
+            break;
           }
-        });
+        }
       },
-      { threshold: 0.1, ...options },
+      { threshold: 0.1, ...optionsRef.current },
     );
 
     observer.observe(target);
@@ -34,7 +36,7 @@ export function useRevealOnScroll<T extends HTMLElement = HTMLElement>(
       observer.unobserve(target);
       observer.disconnect();
     };
-  }, [options]);
+  }, []);
 
   return { ref, isVisible };
 }

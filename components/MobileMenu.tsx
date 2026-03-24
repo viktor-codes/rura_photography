@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { X } from "lucide-react";
-
-type NavItem = {
-  href: string;
-  label: string;
-};
+import type { NavItem } from "@/lib/navigation";
 
 type MobileMenuProps = {
   isOpen: boolean;

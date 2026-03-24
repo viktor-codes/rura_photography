@@ -116,15 +116,6 @@ body {
   animation: logo-house-in 700ms ease-out 200ms forwards;
 }
 
-@keyframes slowzoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.04);
-  }
-}
-
 @keyframes scrollline {
   0%,
   100% {
@@ -134,17 +125,6 @@ body {
   50% {
     opacity: 1;
     transform: scaleY(0.6);
-  }
-}
-
-@keyframes fadeup-initial {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

@@ -1,11 +1,4 @@
-const FOOTER_NAV_ITEMS = [
-  { href: "#portfolio", label: "Work" },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#process", label: "Process" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Book" },
-];
+import { PRIMARY_NAV_ITEMS } from "@/lib/navigation";
 
 export function Footer() {
   return (
@@ -25,7 +18,7 @@ export function Footer() {
           className="order-3 md:order-none"
         >
           <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[0.7rem] uppercase tracking-[0.14em]">
-            {FOOTER_NAV_ITEMS.map((item) => (
+            {PRIMARY_NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}

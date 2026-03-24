@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Reveal } from "./Reveal";
 import confetti from "canvas-confetti";
 
@@ -65,7 +65,7 @@ export function ContactForm() {
     return Object.keys(nextErrors).length === 0;
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     if (!validate()) {
       return;
@@ -113,8 +113,8 @@ export function ContactForm() {
     >
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[url('/house-contact.webp')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0e0e0c]/80 via-[#0e0e0c]/92 to-[#0e0e0c]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-[#0e0e0c]/80 via-[#0e0e0c]/92 to-[#0e0e0c]" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-transparent" />
       </div>
       <div className="relative z-10 max-w-xl">
         <Reveal className="inline-block">
@@ -135,8 +135,8 @@ export function ContactForm() {
         <Reveal>
           <p className="mt-4 max-w-md text-[0.85rem] text-pretty leading-relaxed text-[rgba(250,250,248,0.6)]">
             Based in the Midlands, I am ideally positioned to serve clients
-            nationwide. Whether it's a city apartment or a country estate, I
-            usually respond to all inquiries within one business day.
+            nationwide. Whether it&apos;s a city apartment or a country estate,
+            I usually respond to all inquiries within one business day.
           </p>
         </Reveal>
 

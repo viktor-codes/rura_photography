@@ -2,20 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { PRIMARY_NAV_ITEMS } from "@/lib/navigation";
 import { Logo } from "./Logo";
 import { MobileMenu } from "./MobileMenu";
 
-const NAV_ITEMS = [
-  { href: "#portfolio", label: "Work" },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#process", label: "Process" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Book" },
-];
-
-const LEFT_NAV_ITEMS = NAV_ITEMS.slice(0, 3);
-const RIGHT_NAV_ITEMS = NAV_ITEMS.slice(3);
+const LEFT_NAV_ITEMS = PRIMARY_NAV_ITEMS.slice(0, 3);
+const RIGHT_NAV_ITEMS = PRIMARY_NAV_ITEMS.slice(3);
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -118,7 +110,7 @@ export function Header() {
       <MobileMenu
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        navItems={NAV_ITEMS}
+        navItems={PRIMARY_NAV_ITEMS}
       />
     </>
   );

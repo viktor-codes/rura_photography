@@ -6,7 +6,7 @@ const services = [
     number: "01",
     name: "Listing\nPhotography",
     description:
-      "Professional interior and exterior photography for sales and rentals. Optimised for Daft.ie, MyHome.ie, MyHome.ie and major portals.",
+      "Professional interior and exterior photography for sales and rentals. Optimised for Daft.ie, MyHome.ie, and major portals.",
     price: "From €250",
     includes: [
       "Up to 25 edited images",

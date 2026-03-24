@@ -51,7 +51,7 @@ export function Process() {
       </Reveal>
 
       <div className="mt-14 grid gap-8 md:grid-cols-4 md:gap-12">
-        {steps.map((step, index) => (
+        {steps.map((step) => (
           <Reveal key={step.number}>
             <article className="relative">
               <div className="font-heading text-[2.5rem] font-light text-light">
@@ -63,9 +63,7 @@ export function Process() {
               <p className="mt-2 text-[0.8rem] leading-relaxed text-grey">
                 {step.description}
               </p>
-              {index < steps.length && (
-                <span className="pointer-events-none absolute left-0 top-5 h-px w-10 bg-linear-to-r from-accent to-transparent " />
-              )}
+              <span className="pointer-events-none absolute left-0 top-5 h-px w-10 bg-linear-to-r from-accent to-transparent " />
             </article>
           </Reveal>
         ))}
