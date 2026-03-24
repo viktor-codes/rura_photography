@@ -38,9 +38,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(
-    var(--site-header-height) + env(safe-area-inset-top, 0px)
-  );
 }
 
 body {

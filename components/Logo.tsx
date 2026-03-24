@@ -1,13 +1,14 @@
-import * as React from "react";
+import type { SVGProps } from "react";
 
-export const Logo: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg
-    viewBox="0 0 1500 1500"
-    xmlns="http://www.w3.org/2000/svg"
-    role="img"
-    aria-label="Rura Photography logo"
-    {...props}
-  >
+export function Logo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 1500 1500"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Rura Photography logo"
+      {...props}
+    >
     <defs>
       <clipPath id="logo-clip-house-1">
         <path
@@ -48,6 +49,7 @@ export const Logo: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
         fillRule="nonzero"
       />
     </g>
-  </svg>
-);
+    </svg>
+  );
+}
 
