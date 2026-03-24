@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { SITE_SERVICE_TAGLINE } from "@/lib/siteCopy";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 
 export function Hero() {
@@ -40,7 +41,7 @@ export function Hero() {
               labelVisible ? "reveal--visible" : ""
             }`}
           >
-            Property Photography · Midlands, Ireland
+            {SITE_SERVICE_TAGLINE}
           </p>
           <h1
             id="hero-heading"

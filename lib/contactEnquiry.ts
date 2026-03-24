@@ -1,5 +1,5 @@
 /**
- * Единый источник опций и допустимых значений для формы контакта и POST /api/contact.
+ * Single source for contact form options and allowed values for POST /api/contact.
  */
 
 export type ContactEnquiryPayload = {

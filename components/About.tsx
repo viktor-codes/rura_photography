@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SITE_BASED_BULLET } from "@/lib/siteCopy";
 import { Reveal } from "./Reveal";
 
 export function About() {
@@ -59,7 +60,7 @@ export function About() {
             "17mm–300mm lens coverage",
             "Professional LED lighting",
             "Gimbal stabilisation for video",
-            "Based in Midlands, available nationwide",
+            SITE_BASED_BULLET,
           ].map((item) => (
             <Reveal key={item}>
               <div className="flex items-center gap-3 text-[0.8rem] tracking-[0.05em] text-grey">

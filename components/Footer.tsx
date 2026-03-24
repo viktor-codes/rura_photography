@@ -1,4 +1,5 @@
 import { PRIMARY_NAV_ITEMS } from "@/lib/navigation";
+import { SITE_REGION_BYLINE, SITE_SOCIAL_LINKS } from "@/lib/siteCopy";
 
 export function Footer() {
   return (
@@ -6,7 +7,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div className="space-y-1 text-center md:text-left">
           <p className="tracking-[0.08em] text-[rgba(250,250,248,0.5)]">
-            © 2025 Viktor Rura Photography · Midlands, Ireland
+            © 2025 Viktor Rura Photography · {SITE_REGION_BYLINE}
           </p>
           <p className="text-[0.7rem] text-[rgba(250,250,248,0.5)]">
             Real estate photography for agents, developers, and homeowners.
@@ -44,20 +45,21 @@ export function Footer() {
           >
             ruravictor@gmail.com
           </a>
-          <div className="mt-1 flex gap-4">
-            <a
-              href="#"
-              className="uppercase tracking-[0.14em] text-[rgba(250,250,248,0.6)] transition-colors hover:text-accent"
-            >
-              Instagram
-            </a>
-            <a
-              href="#"
-              className="uppercase tracking-[0.14em] text-[rgba(250,250,248,0.6)] transition-colors hover:text-accent"
-            >
-              LinkedIn
-            </a>
-          </div>
+          {SITE_SOCIAL_LINKS.length > 0 ? (
+            <div className="mt-1 flex flex-wrap justify-center gap-4 md:justify-end">
+              {SITE_SOCIAL_LINKS.map((item) => (
+                <a
+                  key={`${item.label}-${item.href}`}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="uppercase tracking-[0.14em] text-[rgba(250,250,248,0.6)] transition-colors hover:text-accent"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </footer>

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import {
+  SITE_PAGE_DESCRIPTION,
+  SITE_PAGE_TITLE,
+} from "@/lib/siteCopy";
 import "./globals.css";
 
 const headingFont = Cormorant_Garamond({
@@ -19,9 +23,8 @@ const bodyFont = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Viktor Rura — Property Photography Dublin",
-  description:
-    "Premium real estate photography in Dublin and across Ireland. Full-frame interiors, exteriors, and media optimised for Daft.ie, MyHome.ie and high-converting listings.",
+  title: SITE_PAGE_TITLE,
+  description: SITE_PAGE_DESCRIPTION,
   icons: {
     icon: [
       {

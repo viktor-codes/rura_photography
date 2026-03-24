@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { X } from "lucide-react";
 import type { NavItem } from "@/lib/navigation";
+import { SITE_BOOKING_HINT, SITE_SERVICE_TAGLINE } from "@/lib/siteCopy";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -66,8 +67,8 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
         </nav>
 
         <div className="mt-auto flex flex-col gap-2 text-[0.7rem] uppercase tracking-[0.18em] text-[rgba(250,250,248,0.5)]">
-          <span>Property Photography · Dublin, Ireland</span>
-          <span>Available for bookings</span>
+          <span>{SITE_SERVICE_TAGLINE}</span>
+          <span>{SITE_BOOKING_HINT}</span>
         </div>
       </div>
     </div>

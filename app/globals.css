@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 /*
-  Дизайн-токены Tailwind v4 через @theme и CSS-переменные
-  Цвета и шрифты соответствуют оригинальному лендингу.
+  Design tokens for Tailwind v4 via @theme and CSS variables.
+  Colors and fonts match the original landing layout.
 */
 
 :root {
-  /* Под fixed header (py-3 + логотип ~40px); Hero и др. секции могут использовать как отступ сверху */
+  /* Fixed header offset (py-3 + ~40px logo); Hero and other sections use as top spacing */
   --site-header-height: 4.5rem;
 
-  /* Базовые цвета */
+  /* Base colors */
   --color-page-bg: #fafaf8; /* --white */
   --color-page-fg: #0e0e0c; /* --black */
   --color-grey: #8a8a82;
@@ -18,20 +18,20 @@
 }
 
 @theme inline {
-  /* Цвета как утилиты Tailwind */
+  /* Colors exposed as Tailwind utilities */
   --color-page: var(--color-page-bg);
   --color-page-foreground: var(--color-page-fg);
   --color-grey: var(--color-grey);
   --color-light: var(--color-light);
   --color-accent: var(--color-accent);
 
-  /* Типографика: связи Tailwind ↔ CSS-переменные */
-  /* Tailwind утилита font-serif → шрифт заголовков */
+  /* Typography: Tailwind ↔ CSS variable wiring */
+  /* font-serif utility → heading font */
   --font-serif: var(--font-serif);
-  /* Tailwind утилита font-sans → шрифт основного текста */
+  /* font-sans utility → body font */
   --font-sans: var(--font-sans);
 
-  /* Дополнительные алиасы, если используются классы font-heading / font-body */
+  /* Aliases when using font-heading / font-body classes */
   --font-heading: var(--font-serif);
   --font-body: var(--font-sans);
 }
@@ -54,7 +54,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Утилиты для фоновых/текстовых цветов */
+/* Background / text color helpers */
 .bg-page {
   background-color: var(--color-page-bg);
 }
@@ -87,7 +87,7 @@ body {
   color: var(--color-accent);
 }
 
-/* ---------- Анимации и эффекты ---------- */
+/* ---------- Animations ---------- */
 
 @keyframes spin-slow {
   from {
@@ -131,7 +131,7 @@ body {
   }
 }
 
-/* Reveal-анимация через Intersection Observer */
+/* Reveal on scroll (Intersection Observer) */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -145,7 +145,7 @@ body {
   transform: translateY(0);
 }
 
-/* (кастомный курсор удалён по требованию дизайна) */
+/* Custom cursor removed per design */
 
 /* ---------- FAQ accordion ---------- */
 
