@@ -1,20 +1,17 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { Reveal } from "./Reveal";
 import confetti from "canvas-confetti";
+import {
+  type ContactEnquiryPayload,
+  PACKAGE_OPTIONS,
+  PROPERTY_TYPE_OPTIONS,
+} from "@/lib/contactEnquiry";
+import { Reveal } from "./Reveal";
 
-type FormState = {
-  name: string;
-  email: string;
-  propertyType: string;
-  packageType: string;
-  message: string;
-};
+type FormErrors = Partial<Record<keyof ContactEnquiryPayload, string>>;
 
-type FormErrors = Partial<Record<keyof FormState, string>>;
-
-const initialState: FormState = {
+const initialState: ContactEnquiryPayload = {
   name: "",
   email: "",
   propertyType: "",
@@ -23,13 +20,13 @@ const initialState: FormState = {
 };
 
 export function ContactForm() {
-  const [values, setValues] = useState<FormState>(initialState);
+  const [values, setValues] = useState<ContactEnquiryPayload>(initialState);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleChange = (field: keyof FormState, value: string): void => {
+  const handleChange = (field: keyof ContactEnquiryPayload, value: string): void => {
     setValues((prev) => ({ ...prev, [field]: value }));
     setErrors((prev) => ({ ...prev, [field]: undefined }));
     if (submitted) {
@@ -214,11 +211,11 @@ export function ContactForm() {
                 }
               >
                 <option value="">Select type</option>
-                <option value="Apartment">Apartment</option>
-                <option value="House">House</option>
-                <option value="Commercial">Commercial</option>
-                <option value="New development">New development</option>
-                <option value="Other">Other</option>
+                {PROPERTY_TYPE_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
               </select>
               {errors.propertyType && (
                 <p
@@ -250,15 +247,11 @@ export function ContactForm() {
                 }
               >
                 <option value="">Select package</option>
-                <option value="Listing Photography — from €250">
-                  Listing Photography — from €250
-                </option>
-                <option value="Premium Property Pack — from €550">
-                  Premium Property Pack — from €550
-                </option>
-                <option value="Agent Partnership — custom">
-                  Agent Partnership — custom
-                </option>
+                {PACKAGE_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
               </select>
               {errors.packageType && (
                 <p

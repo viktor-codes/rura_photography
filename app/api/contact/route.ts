@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import {
+  isAllowedPackageType,
+  isAllowedPropertyType,
+} from "@/lib/contactEnquiry";
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const contactToEmail = process.env.CONTACT_TO_EMAIL;
@@ -48,6 +52,33 @@ export async function POST(request: Request) {
     packageType: string;
     message: string;
   };
+
+  if (
+    typeof name !== "string" ||
+    typeof email !== "string" ||
+    typeof propertyType !== "string" ||
+    typeof packageType !== "string" ||
+    typeof message !== "string"
+  ) {
+    return NextResponse.json(
+      { success: false, error: "Invalid field types." },
+      { status: 400 },
+    );
+  }
+
+  if (!isAllowedPropertyType(propertyType)) {
+    return NextResponse.json(
+      { success: false, error: "Invalid property type." },
+      { status: 400 },
+    );
+  }
+
+  if (!isAllowedPackageType(packageType)) {
+    return NextResponse.json(
+      { success: false, error: "Invalid package selection." },
+      { status: 400 },
+    );
+  }
 
   const textLines = [
     `New property photography enquiry`,
