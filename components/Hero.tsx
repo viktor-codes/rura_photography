@@ -16,7 +16,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative flex min-h-screen overflow-hidden bg-page text-white"
+      className="relative flex flex-col min-h-dvh w-full overflow-hidden bg-page text-white"
       aria-labelledby="hero-heading"
     >
       <div className="absolute inset-0">
@@ -26,13 +26,13 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="h-full w-full object-cover"
+          className="object-cover"
         />
 
         <div className="absolute inset-0 bg-linear-to-r from-black via-black/80 to-black/70" />
       </div>
 
-      <div className="relative z-10 w-full flex items-end px-8 pb-24 md:px-16 md:pb-32">
+      <div className="relative z-10 w-full flex flex-1 items-end px-8 pb-24 md:px-16 md:pb-32 py-24">
         <div className="max-w-5xl space-y-6">
           <p
             ref={labelRef}

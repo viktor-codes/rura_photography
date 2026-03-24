@@ -6,6 +6,9 @@
 */
 
 :root {
+  /* Под fixed header (py-3 + логотип ~40px); Hero и др. секции могут использовать как отступ сверху */
+  --site-header-height: 4.5rem;
+
   /* Базовые цвета */
   --color-page-bg: #fafaf8; /* --white */
   --color-page-fg: #0e0e0c; /* --black */
