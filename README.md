@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rura Photography
 
-## Getting Started
+**Premium property photography — Midlands & Dublin, Ireland**
 
-First, run the development server:
+**Live site:** [ruraphotography.vercel.app](https://ruraphotography.vercel.app/)
+
+A single-page marketing site for a real-estate photographer: portfolio grid, services, process, FAQ, and a contact form wired to email via [Resend](https://resend.com). Built as a fast, accessible Next.js app with Tailwind CSS v4.
+
+---
+
+## Preview
+
+Click through to the **[live deployment](https://ruraphotography.vercel.app/)** for the full experience.
+
+Hero screenshot (add your own file as `docs/preview-hero.png`
+
+![Hero section — placeholder until docs/preview-hero.png is added](docs/hero-screenshot.png)
+
+---
+
+## Highlights
+
+- **Performance** — Next.js App Router, static page generation, optimised `next/image` assets
+- **UX** — Fixed header, smooth anchor navigation with scroll padding, mobile menu, reveal-on-scroll sections
+- **Forms** — Client-side validation; server-side checks against shared option lists (`lib/contactEnquiry.ts`)
+- **Content** — Centralised copy and metadata in `lib/siteCopy.ts` for consistent region messaging
+
+---
+
+## Tech stack
+
+| Area      | Choice                             |
+| --------- | ---------------------------------- |
+| Framework | Next.js 16 (App Router)            |
+| UI        | React 19, Tailwind CSS 4           |
+| Language  | TypeScript (strict)                |
+| Email API | Resend                             |
+| Icons     | Lucide React                       |
+| Delight   | canvas-confetti on successful send |
+
+---
+
+## Getting started
+
+**Requirements:** Node.js 20+ (recommended), npm.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description             |
+| --------------- | ----------------------- |
+| `npm run dev`   | Development server      |
+| `npm run build` | Production build        |
+| `npm run start` | Run production server   |
+| `npm run lint`  | ESLint (Next.js config) |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Environment variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create **`.env.local`** in the project root (never commit it). The contact API needs:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable             | Required | Description                                                                              |
+| -------------------- | -------- | ---------------------------------------------------------------------------------------- |
+| `RESEND_API_KEY`     | Yes\*    | Resend API key                                                                           |
+| `CONTACT_TO_EMAIL`   | Yes\*    | Inbox that receives enquiries                                                            |
+| `CONTACT_FROM_EMAIL` | No       | `From:` address (must be allowed in Resend). Defaults to `no-reply@rura-photography.com` |
 
-## Deploy on Vercel
+\*Without these, `POST /api/contact` returns `500` with a clear JSON error; the rest of the site still runs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project layout
+
+```
+app/
+  api/contact/route.ts   # Resend email handler
+  layout.tsx             # Fonts, metadata
+  page.tsx               # Composes all sections
+  globals.css            # Tokens, animations, FAQ styles
+components/              # Header, Hero, sections, Footer, Logo, …
+hooks/useRevealOnScroll.ts
+lib/
+  contactEnquiry.ts      # Form payload type + select options + server validation helpers
+  navigation.ts          # Primary nav items
+  siteCopy.ts            # Taglines, SEO strings, optional social URLs
+docs/                    # Optional README screenshots (e.g. preview-hero.png)
+public/                  # Images, favicon, logo SVG
+```
+
+---
+
+## Deployment
+
+Production example: **[ruraphotography.vercel.app](https://ruraphotography.vercel.app/)** (Vercel).
+
+Deploy on [Vercel](https://vercel.com) (or any Node host that supports Next.js). Add the same environment variables in the project settings. Ensure your Resend domain/`From` address is verified.
+
+---
+
+## Licence
+
+Private project — all rights reserved unless otherwise stated.
